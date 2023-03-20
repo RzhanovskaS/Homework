@@ -1,0 +1,114 @@
+1) Посмотреть где я
+pwd
+
+2) Создать папку
+mkdir HW1_GitB
+
+3) Зайти в папку
+cd HW1_GitB
+
+4) Создать 3 папки
+mkdir F1 F2 F3
+
+5) Зайти в любоую папку
+cd F1
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch land.txt Earth.txt Moon.txt star.json ice.json
+
+7) Создать 3 папки
+mkdir folder_1 folder_2 folder_3
+
+8. Вывести список содержимого папки
+ls 
+ls -la
+ls -a
+ls -list
+
+9) + Открыть любой txt файл
+vim land.txt
+
+10) + написать туда что-нибудь, любой текст.
+(shift):start
+Hello!
+My name is Lana
+This document is a part of the hometask.
+Git Bash is an application for Microsoft Windows environments which provides an emulation layer for a Git command line experience.
+Bash is an acronym for Bourne Again Shell.
+A shell is a terminal application used to interface with an operating system through written commands.
+Bash is a popular default shell on Linux and macOS.
+Git Bash is a package that installs Bash, some common bash utilities, and Git on a Windows operating system.
+
+11) + сохранить и выйти.
+(Esc):wq
+
+12) Выйти из папки на уровень выше
+cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv Earth.txt ice.json /c/users/pc/HW1_GitB/F1/folder_2
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp land.txt star.json /c/users/pc/HW1_GitB/F1/folder_3
+
+15) Найти файл по имени
+find star.json
+ls | grep land.txt
+
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+ls | grep 
+grep -i Lana land.txt
+
+17) вывести несколько первых строк из текстового файла
+
+ cat land.txt | head -n5 | tail -n2
+head -2 land.txt
+
+
+18) вывести несколько последних строк из текстового файла  (иначе)
+tail -3 land.txt
+
+sed -n 2p land.txt вывести 2 строку 
+
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less land.txt
+
+20) вывести дату и время
+date 
+date +%c
+
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+curl http://162.55.220.72:5005/terminal-hw-request
+
+
+#2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+touch script 
+vim script 
+
+
+#!/bin/bash
+#3) Зайти в папку
+cd folder_1
+#4) Создать 3 папки
+mkdir testfolder_1 testfolder_2 testfolder_3
+#5) Зайти в любоую папку
+cd testfolder_3
+#6) Создать 5 файлов (3 txt, 2 json)
+touch file_1.txt file_2.txt file_3.txt file_4.json file_5.json
+#7) Создать 3 папки
+mkdir folder_4 folder_5 folder_6
+#8. Вывести список содержимого папки
+ls -la
+#13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv file_1.txt file_2.txt /c/Users/PC/HW1_GitB/F1/folder_1/testfolder_3/folder_6
+
+
+./scriprt
+
+====
